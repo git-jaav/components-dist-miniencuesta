@@ -7,5 +7,8 @@ ENV userPoolId="us-east-1_7xMkyXt80"
 ENV host="rdsinstance-miniencuesta-t1.cymwazpjjklx.us-east-1.rds.amazonaws.com"
 ENV port="3306"
 ENV database="mini_encuesta"
-ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /workspace/app.jar
+ENV username="root"
+ENV password="51573m45"
 EXPOSE 8081
+#ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /workspace/app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
