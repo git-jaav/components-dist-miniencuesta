@@ -11,4 +11,4 @@ ENV username="root"
 ENV password="51573m45"
 EXPOSE 8081
 #ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /workspace/app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/workspace/app.jar"]
